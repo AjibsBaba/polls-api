@@ -1,0 +1,52 @@
+info:
+  description: ''
+  title: ''
+  version: ''
+openapi: 3.0.0
+paths:
+  /login/:
+    post:
+      operationId: login_create
+      tags:
+      - login
+  /polls/:
+    get:
+      operationId: polls_list
+      tags:
+      - polls
+    post:
+      operationId: polls_create
+      tags:
+      - polls
+  /polls/{id}:
+    delete:
+      operationId: polls_delete
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: A unique integer value identifying this poll.
+          title: ID
+          type: integer
+      tags:
+      - polls
+    get:
+      operationId: polls_read
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: A unique integer value identifying this poll.
+          title: ID
+          type: integer
+      tags:
+      - polls
+  /users/:
+    post:
+      operationId: users_create
+      tags:
+      - users
+servers:
+- url: ''
