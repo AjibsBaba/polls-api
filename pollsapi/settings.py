@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'polls',
     'rest_framework',
     'rest_framework.authtoken',
-    'rest__swagger',
+    'rest_swagger',
 ]
 
 MIDDLEWARE = [
