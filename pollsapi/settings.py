@@ -143,7 +143,7 @@ SECURE_BROWSER_XSS_FILTER = bool(os.getenv('XSS'))
 SESSION_COOKIE_SECURE = bool(os.getenv('COOKIE'))
 SECURE_SSL_REDIRECT = bool(os.getenv('SSL'))
 CSRF_COOKIE_SECURE = bool(os.getenv('CSRF'))
-X_FRAME_OPTIONS = bool(os.getenv('FRAME'))
+X_FRAME_OPTIONS = str(os.getenv('FRAME'))
 
 
 #routers
