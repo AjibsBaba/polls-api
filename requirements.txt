@@ -19,6 +19,7 @@ python-dotenv==0.14.0
 pytz==2020.1
 PyYAML==5.3.1
 requests==2.24.0
+rest-swagger==1.0.0
 ruamel.yaml==0.16.12
 ruamel.yaml.clib==0.2.2
 simplejson==3.17.2
