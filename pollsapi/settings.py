@@ -144,3 +144,9 @@ SESSION_COOKIE_SECURE = bool(os.getenv('COOKIE'))
 SECURE_SSL_REDIRECT = bool(os.getenv('SSL'))
 CSRF_COOKIE_SECURE = bool(os.getenv('CSRF'))
 X_FRAME_OPTIONS = bool(os.getenv('FRAME'))
+
+
+#routers
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/admin'
