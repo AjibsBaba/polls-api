@@ -139,7 +139,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 #SECURITY CONFIG
-# SECURE_BROWSER_XSS_FILTER = bool(os.getenv('XSS'))
-# SESSION_COOKIE_SECURE = bool(os.getenv('COOKIE'))
-# SECURE_SSL_REDIRECT = bool(os.getenv('SSL'))
-# CSRF_COOKIE_SECURE = bool(os.getenv('CSRF'))
+SECURE_BROWSER_XSS_FILTER = bool(os.getenv('XSS'))
+SESSION_COOKIE_SECURE = bool(os.getenv('COOKIE'))
+SECURE_SSL_REDIRECT = bool(os.getenv('SSL'))
+CSRF_COOKIE_SECURE = bool(os.getenv('CSRF'))
+X_FRAME_OPTIONS = bool(os.getenv('FRAME'))
