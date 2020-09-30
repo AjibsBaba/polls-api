@@ -18,7 +18,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.getenv('DEBUG_INFO'))
 
-ALLOWED_HOSTS = ['dbaba-polls-api.herokuapp.com', 'localhost:8090', 'localhost']
+ALLOWED_HOSTS = ['dbaba-polls-api.herokuapp.com']
 
 
 # Application definition
