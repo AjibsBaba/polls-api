@@ -18,7 +18,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.getenv('DEBUG_INFO'))
 
-ALLOWED_HOSTS = ['dbaba-polls-api.herokuapp.com']
+ALLOWED_HOSTS = ['dbaba-polls-api.herokuapp.com', 'localhost:8090', 'localhost']
 
 
 # Application definition
@@ -51,7 +51,7 @@ ROOT_URLCONF = 'pollsapi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'rest_swagger'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -59,7 +59,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
+            ]
         },
     },
 ]
@@ -139,7 +139,7 @@ REST_FRAMEWORK = {
 
 
 #SECURITY CONFIG
-SECURE_BROWSER_XSS_FILTER = bool(os.getenv('XSS'))
-SESSION_COOKIE_SECURE = bool(os.getenv('COOKIE'))
-SECURE_SSL_REDIRECT = bool(os.getenv('SSL'))
-CSRF_COOKIE_SECURE = bool(os.getenv('CSRF'))
+# SECURE_BROWSER_XSS_FILTER = bool(os.getenv('XSS'))
+# SESSION_COOKIE_SECURE = bool(os.getenv('COOKIE'))
+# SECURE_SSL_REDIRECT = bool(os.getenv('SSL'))
+# CSRF_COOKIE_SECURE = bool(os.getenv('CSRF'))
