@@ -2,3 +2,10 @@
 **/__pycache__/
 **/migrations
 venv/
+.idea/.gitignore
+.idea/dictionaries
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/polls-api.iml
+.idea/vcs.xml
