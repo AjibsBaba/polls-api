@@ -2,12 +2,11 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
-#loads the data from the env file
+# loads the data from the env file
 load_dotenv(find_dotenv())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -19,7 +18,6 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 DEBUG = bool(os.getenv('DEBUG_INFO'))
 
 ALLOWED_HOSTS = ['dbaba-polls-api.herokuapp.com']
-
 
 # Application definition
 
@@ -67,7 +65,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pollsapi.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -77,7 +74,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -97,7 +93,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -111,7 +106,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -120,7 +114,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -137,8 +130,7 @@ REST_FRAMEWORK = {
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
-#SECURITY CONFIG
+# SECURITY CONFIG
 SECURE_BROWSER_XSS_FILTER = bool(os.getenv('XSS'))
 SESSION_COOKIE_SECURE = bool(os.getenv('COOKIE'))
 SECURE_SSL_REDIRECT = bool(os.getenv('SSL'))
@@ -146,7 +138,7 @@ CSRF_COOKIE_SECURE = bool(os.getenv('CSRF'))
 X_FRAME_OPTIONS = str(os.getenv('FRAME'))
 
 
-#routers
+# routers
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/admin'

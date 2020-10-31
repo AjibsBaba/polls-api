@@ -8,8 +8,6 @@ from rest_framework.exceptions import PermissionDenied
 from django.contrib.auth import authenticate
 
 
-
-
 class pollList(generics.ListCreateAPIView):
     queryset = Poll.objects.all()
     serializer_class = PollSerializer
@@ -26,7 +24,6 @@ class choiceList(generics.ListCreateAPIView):
     def queryset(self):
         queryset = Choice.objects.filter(poll_id=self.kwargs["pk"])
         return queryset
-
 
     def post(self, request, *args, **kwargs):
         poll = Poll.objects.get(pk=self.kwargs["pk"])
